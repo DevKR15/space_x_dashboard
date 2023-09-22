@@ -116,12 +116,7 @@ export default function Launches({ launchId }) {
       return true;
     });
   };
-  console.log(
-    '-------',
-    getLaunchDetails &&
-      getLaunchDetails.rocket &&
-      getLaunchDetails.rocket.rocket.payload_weights
-  );
+
   const handleClose = () => {
     setOpen(false);
   };
