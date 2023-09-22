@@ -8,6 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import { useSelector } from 'react-redux';
+import moment from 'moment';
 
 import { useQuery, gql } from '@apollo/client';
 import { useDispatch } from 'react-redux';
@@ -57,7 +58,7 @@ export default function UpcomingLaunches() {
     upcomingLaunches.forEach((element, key) => {
       rows.push(
         createData(
-          element.launch_date_local,
+          moment(element.launch_date_local).format('MMM Do YYYY'),
           element.launch_site,
           element.mission_name
         )
@@ -66,7 +67,7 @@ export default function UpcomingLaunches() {
   } else {
     rows.push(
       createData(
-        upcomingLaunches.launch_date_local,
+        moment(upcomingLaunches.launch_date_local).format('MMM Do YYYY'),
         upcomingLaunches.launch_site,
         upcomingLaunches.mission_name
       )

@@ -7,7 +7,6 @@ import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
 function App() {
   return (
     <>
-      {/* <Nav /> */}
       <div className=" w-full h-screen overflow-auto">
         <Nav />
         <BrowserRouter>
