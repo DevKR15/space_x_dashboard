@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import PublicIcon from '@mui/icons-material/Public';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 const Nav = () => {
   let Links = [
-    { name: 'HOME', link: '/' },
-    { name: 'DASHBOARD', link: '/' },
+    { name: 'HOME', link: '/home' },
+    { name: 'DASHBOARD', link: '/dashboard' },
   ];
 
   let [open, setOpen] = useState(false);
@@ -14,13 +13,18 @@ const Nav = () => {
     <div className=" shadow-md w-full fixed top-0 left-0">
       <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-5">
         <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800">
-          <span className="text-indigo-600 mr-2 pt-0 mt-0">
-            <PublicIcon />
-          </span>
-          SpaceX
+          <a href="https://www.spacex.com/human-spaceflight/" className="h-14">
+            <span className="text-indigo-600 mr-2 pt-0 mt-0">
+              <img
+                src={require('../assets/icon.png')}
+                className="h-16 w-[30]"
+                alt=""
+              />
+            </span>
+          </a>
         </div>
         <div
-          className="text-3xl absolute right-8 top-3 cursor-pointer md:hidden"
+          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
           onClick={() => setOpen(!open)}
         >
           {open ? <CloseIcon /> : <MenuIcon />}
