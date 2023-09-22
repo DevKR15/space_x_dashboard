@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import PublicIcon from "@mui/icons-material/Public";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import React, { useState } from 'react';
+import PublicIcon from '@mui/icons-material/Public';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Nav = () => {
   let Links = [
-    { name: "HOME", link: "/" },
-    { name: "DASHBOARD", link: "/" },
+    { name: 'HOME', link: '/' },
+    { name: 'DASHBOARD', link: '/' },
   ];
 
   let [open, setOpen] = useState(false);
@@ -28,8 +28,8 @@ const Nav = () => {
         <ul
           className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-5 transition-all duration-500 ease-in ${
             open
-              ? "top-16 opacity-100"
-              : "top-[-490px] md:opacity-100 opacity-0"
+              ? 'top-16 opacity-100'
+              : 'top-[-490px] md:opacity-100 opacity-0'
           }`}
         >
           {Links.map((link) => (
