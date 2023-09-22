@@ -4,8 +4,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const Nav = () => {
   let Links = [
-    { name: 'HOME', link: '/home' },
-    { name: 'DASHBOARD', link: '/dashboard' },
+    { name: 'HOME', link: '/space_x_dashboard/#/home' },
+    { name: 'DASHBOARD', link: '/space_x_dashboard/#/dashboard' },
   ];
 
   let [open, setOpen] = useState(false);
@@ -37,7 +37,11 @@ const Nav = () => {
           }`}
         >
           {Links.map((link) => (
-            <li key={link.name} className="md:ml-8 text-xl md:my-0 my-7">
+            <li
+              key={link.name}
+              className="md:ml-8 text-xl md:my-0 my-7"
+              onClick={() => setOpen(false)}
+            >
               <a
                 href={link.link}
                 className="text-gray-800 hover:text-gray-400 duration-500"
