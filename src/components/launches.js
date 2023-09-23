@@ -198,7 +198,7 @@ export default function Launches({ launchId }) {
         open={getOpen}
       >
         <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-          Modal title
+          Launch Details
         </DialogTitle>
         <IconButton
           aria-label="close"
